@@ -12,4 +12,9 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+ 
+end
+
+class ActionDispatch::IntegrationTest
+  include Rails.application.routes.url_helpers
 end

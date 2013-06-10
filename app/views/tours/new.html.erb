@@ -3,3 +3,15 @@
 <%= render 'form' %>
 
 <%= link_to 'Back', tours_path %>
+<br/><br/><br/><br/><br/><br/>
+<select id="tour_tour_start_location_id" name="tour[tour_start_location_id]" size="1">
+<% @cities.each do |city| %>
+      <option><%= city.city_name %></option>
+<% end %>
+</select>
+<br/><br/><br/>
+<%= form_tag("/tours", :method => "post") do %>
+  <%= label_tag(:tour_tour_start_location_id, "Start Location:") %>
+  <%= text_field_tag(:tour_tour_start_location_id) %>
+  <%= submit_tag("abschicken") %>
+<% end %>

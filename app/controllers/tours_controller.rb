@@ -15,6 +15,7 @@ class ToursController < ApplicationController
   # GET /tours/new
   def new
     @tour = Tour.new
+	@cities = City.all
   end
 
   # GET /tours/1/edit
