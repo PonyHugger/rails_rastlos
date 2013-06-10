@@ -8,4 +8,10 @@ class TourCheckHeadline < ActionDispatch::IntegrationTest
     assert page.has_content?('New tour')
   end
 end
+class CityCreatCity < ActionDispatch::IntegrationTest
+  test "create new city" do
+    city = City.new city_name: "Schuby"
+    assert city.valid?, "valid with a city_name"
+  end
+end
 
