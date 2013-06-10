@@ -5,11 +5,17 @@
 <%= link_to 'Back', cities_path %>
 
 <script>
-$("h1").click(function() {
-$.getJSON('http://nominatim.openstreetmap.org/search/' + $("#city_city_name").val() + ',%20deutschland?format=json&polygon=0&addressdetails=0', function(data) {
+var keyUpTime = 1000; // 1 sec
+var keyUpTimeout = null;
+$('#city_city_name').keyup( function(e) {
+    clearTimeout(keyUpTimeout);
+    keyUpTimeout = setTimeout(function() { checkOSM(); }, keyUpTime);
+});
+function checkOSM() {
+	$.getJSON('http://nominatim.openstreetmap.org/search/' + $("#city_city_name").val() + ',%20deutschland?format=json&polygon=0&addressdetails=0', function(data) {
 		$("#city_city_name").val(data[0].display_name);
 		$("#city_city_lon").val(data[0].lon);
 		$("#city_city_lat").val(data[0].lat);
 	});
-});
+}
 </script>
