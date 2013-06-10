@@ -4,8 +4,7 @@ require "test_helper"
 
 class TourCheckHeadline < ActionDispatch::IntegrationTest
   test "will the headline be displayed" do
-    visit new_tour_path
-    assert page.has_content?('New tour')
+    assert new_tour_path.has_content?('New tour')
   end
 end
 class CityCreatCity < ActionDispatch::IntegrationTest
