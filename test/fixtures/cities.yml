@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  city_name: MyString
+  city_lon: 1.5
+  city_lat: 1.5
+
+two:
+  city_name: MyString
+  city_lon: 1.5
+  city_lat: 1.5

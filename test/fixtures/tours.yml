@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tour_passenger_ids: MyString
+  tour_start_location_id: 1
+  tour_end_location: 1
+  tour_start_time: 2013-06-10
+  tour_end_time: 2013-06-10
+  tour_seats: 1
+  tour_car: MyString
+  tour_smoker: false
+  tour_offer: false
+  tour_password: MyString
+
+two:
+  tour_passenger_ids: MyString
+  tour_start_location_id: 1
+  tour_end_location: 1
+  tour_start_time: 2013-06-10
+  tour_end_time: 2013-06-10
+  tour_seats: 1
+  tour_car: MyString
+  tour_smoker: false
+  tour_offer: false
+  tour_password: MyString

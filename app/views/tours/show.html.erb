@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tour passenger ids:</strong>
+  <%= @tour.tour_passenger_ids %>
+</p>
+
+<p>
+  <strong>Tour start location:</strong>
+  <%= @tour.tour_start_location_id %>
+</p>
+
+<p>
+  <strong>Tour end location:</strong>
+  <%= @tour.tour_end_location %>
+</p>
+
+<p>
+  <strong>Tour start time:</strong>
+  <%= @tour.tour_start_time %>
+</p>
+
+<p>
+  <strong>Tour end time:</strong>
+  <%= @tour.tour_end_time %>
+</p>
+
+<p>
+  <strong>Tour seats:</strong>
+  <%= @tour.tour_seats %>
+</p>
+
+<p>
+  <strong>Tour car:</strong>
+  <%= @tour.tour_car %>
+</p>
+
+<p>
+  <strong>Tour smoker:</strong>
+  <%= @tour.tour_smoker %>
+</p>
+
+<p>
+  <strong>Tour offer:</strong>
+  <%= @tour.tour_offer %>
+</p>
+
+<p>
+  <strong>Tour password:</strong>
+  <%= @tour.tour_password %>
+</p>
+
+<%= link_to 'Edit', edit_tour_path(@tour) %> |
+<%= link_to 'Back', tours_path %>

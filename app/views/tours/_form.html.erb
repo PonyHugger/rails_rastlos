@@ -1,0 +1,57 @@
+<%= form_for(@tour) do |f| %>
+  <% if @tour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tour.errors.count, "error") %> prohibited this tour from being saved:</h2>
+
+      <ul>
+      <% @tour.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tour_passenger_ids %><br>
+    <%= f.text_field :tour_passenger_ids %>
+  </div>
+  <div class="field">
+    <%= f.label :tour_start_location_id %><br>
+    <%= f.number_field :tour_start_location_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tour_end_location %><br>
+    <%= f.number_field :tour_end_location %>
+  </div>
+  <div class="field">
+    <%= f.label :tour_start_time %><br>
+    <%= f.date_select :tour_start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :tour_end_time %><br>
+    <%= f.date_select :tour_end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :tour_seats %><br>
+    <%= f.number_field :tour_seats %>
+  </div>
+  <div class="field">
+    <%= f.label :tour_car %><br>
+    <%= f.text_field :tour_car %>
+  </div>
+  <div class="field">
+    <%= f.label :tour_smoker %><br>
+    <%= f.check_box :tour_smoker %>
+  </div>
+  <div class="field">
+    <%= f.label :tour_offer %><br>
+    <%= f.check_box :tour_offer %>
+  </div>
+  <div class="field">
+    <%= f.label :tour_password %><br>
+    <%= f.text_field :tour_password %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
